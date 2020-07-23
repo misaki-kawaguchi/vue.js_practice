@@ -9,14 +9,15 @@
   <script src="vue.js"></script>
 
   <div id="app">
-    <div>{{ html }}</div>
-    <div v-html="html"></div>
+    <a v-bind:href="url">Google</a>
+    <!-- v-bindは省略できる -->
+    <a :href="url">Google</a>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        html: '<h1>h1です</h1>'
+        url: 'https://google.com'
       }
     })
   </script>
