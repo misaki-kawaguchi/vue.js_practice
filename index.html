@@ -12,12 +12,20 @@
     <a v-bind:href="url">Google</a>
     <!-- v-bindは省略できる -->
     <a :href="url">Google</a>
+
+    <a :[attribute]="url">Google</a>
+    <a v-bind="twitterObject">Twitter</a>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        url: 'https://google.com'
+        url: 'https://google.com',
+        attribute: 'href',
+        twitterObject: {
+          href: 'https://twitter.com',
+          id: 32
+        }
       }
     })
   </script>
